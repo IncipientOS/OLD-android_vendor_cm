@@ -132,7 +132,6 @@ PRODUCT_PACKAGES += \
     LockClock \
     ThemeInterfacer \
     Trebuchet \
-    Updater \
     WallpaperPicker \
     WeatherProvider
 
