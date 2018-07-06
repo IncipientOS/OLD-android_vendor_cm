@@ -90,6 +90,12 @@ ifeq ($(WITH_TWRP),true)
 include vendor/cm/config/twrp.mk
 endif
 
+# Debuggable by default
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.service.adb.enable=1 \
+    persist.service.debuggable=1 \
+    persist.sys.usb.config=adb
+
 # Bootanimation
 PRODUCT_PACKAGES += \
     bootanimation.zip
@@ -119,15 +125,21 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AudioFX \
     CMSettingsProvider \
-    LineageSetupWizard \
     Eleven \
     ExactCalculator \
     Jelly \
     LockClock \
+    ThemeInterfacer \
     Trebuchet \
-    Updater \
     WallpaperPicker \
     WeatherProvider
+
+# DU Utils Library
+PRODUCT_PACKAGES += \
+    org.dirtyunicorns.utils
+
+PRODUCT_BOOT_JARS += \
+    org.dirtyunicorns.utils
 
 # Exchange support
 PRODUCT_PACKAGES += \
@@ -322,7 +334,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.cm.releasetype=$(CM_BUILDTYPE) \
     ro.cm.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
     ro.modversion=$(LINEAGE_VERSION) \
-    ro.cmlegal.url=https://lineageos.org/legal
+    ro.cmlegal.url=https://lineageos.org/legal \
+    ro.lineageoms.version=$(LINEAGE_VERSION)
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/cm/build/target/product/security/lineage
