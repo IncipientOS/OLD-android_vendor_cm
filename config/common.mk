@@ -130,7 +130,7 @@ PRODUCT_PACKAGES += \
     Jelly \
     LockClock \
     ThemeInterfacer \
-    Trebuchet \
+    LeanLauncher \
     WallpaperPicker \
     WeatherProvider
 
