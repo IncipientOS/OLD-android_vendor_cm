@@ -130,9 +130,12 @@ PRODUCT_PACKAGES += \
     Jelly \
     LockClock \
     ThemeInterfacer \
-    Trebuchet \
     WallpaperPicker \
     WeatherProvider
+
+# Enable assistant by default
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opa.eligible_device=true
 
 # DU Utils Library
 PRODUCT_PACKAGES += \
@@ -171,6 +174,10 @@ PRODUCT_PACKAGES += \
     vim \
     wget \
     zip
+
+# Lean-Launcher
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/apks/LeanLauncher/LeanLauncher.apk:system/priv-app/LeanLauncher/LeanLauncher.apk
 
 # Custom off-mode charger
 ifneq ($(WITH_CM_CHARGER),false)
