@@ -130,7 +130,6 @@ PRODUCT_PACKAGES += \
     Jelly \
     LockClock \
     ThemeInterfacer \
-    LeanLauncher \
     WallpaperPicker \
     WeatherProvider
 
@@ -175,6 +174,10 @@ PRODUCT_PACKAGES += \
     vim \
     wget \
     zip
+
+# Lean-Launcher
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/apks/LeanLauncher/LeanLauncher.apk:system/priv-app/LeanLauncher/LeanLauncher.apk
 
 # Custom off-mode charger
 ifneq ($(WITH_CM_CHARGER),false)
