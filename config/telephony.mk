@@ -1,4 +1,4 @@
-include vendor/nexus/sdclang/sdclang.mk
+include vendor/cm/sdclang/sdclang.mk
 
 # Sensitive Phone Numbers list
 PRODUCT_COPY_FILES += \
