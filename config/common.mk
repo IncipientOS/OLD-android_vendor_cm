@@ -125,9 +125,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AudioFX \
     CMSettingsProvider \
-    Eleven \
     ExactCalculator \
-    Jelly \
     LockClock \
     ThemeInterfacer \
     WallpaperPicker \
@@ -175,9 +173,15 @@ PRODUCT_PACKAGES += \
     wget \
     zip
 
-# Lean-Launcher
+# IncipientOS Prebuilts
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/apks/LeanLauncher/LeanLauncher.apk:system/priv-app/LeanLauncher/LeanLauncher.apk
+    vendor/cm/prebuilt/apks/Calendar/Calendar.apk:system/priv-app/Calendar/Calendar.apk \
+    vendor/cm/prebuilt/apks/Gassistant/Gassistant.apk:system/priv-app/Gassistant/Gassistant.apk \
+    vendor/cm/prebuilt/apks/LeanLauncher/LeanLauncher.apk:system/priv-app/LeanLauncher/LeanLauncher.apk \
+    vendor/cm/prebuilt/apks/Messages/Messages.apk:system/priv-app/Messages/Messages.apk \
+    vendor/cm/prebuilt/apks/MTweaks/MTweaks.apk:system/priv-app/MTweaks/MTweaks.apk \
+    vendor/cm/prebuilt/apks/Musicolet/Musicolet.apk:system/priv-app/Musicolet/Musicolet.apk \
+    vendor/cm/prebuilt/apks/ViaBrowser/ViaBrowser.apk:system/priv-app/ViaBrowser/ViaBrowser.apk
 
 # Custom off-mode charger
 ifneq ($(WITH_CM_CHARGER),false)
