@@ -127,6 +127,7 @@ PRODUCT_PACKAGES += \
     CMSettingsProvider \
     ExactCalculator \
     LockClock \
+    OmniSwitch \
     ThemeInterfacer \
     WallpaperPicker \
     WeatherProvider
@@ -176,7 +177,6 @@ PRODUCT_PACKAGES += \
 # IncipientOS Prebuilts
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/apks/Calendar/Calendar.apk:system/priv-app/Calendar/Calendar.apk \
-    vendor/cm/prebuilt/apks/Gassistant/Gassistant.apk:system/priv-app/Gassistant/Gassistant.apk \
     vendor/cm/prebuilt/apks/LeanLauncher/LeanLauncher.apk:system/priv-app/LeanLauncher/LeanLauncher.apk \
     vendor/cm/prebuilt/apks/Messages/Messages.apk:system/priv-app/Messages/Messages.apk \
     vendor/cm/prebuilt/apks/MTweaks/MTweaks.apk:system/priv-app/MTweaks/MTweaks.apk \
