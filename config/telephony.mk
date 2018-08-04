@@ -1,5 +1,3 @@
-include vendor/cm/sdclang/sdclang.mk
-
 # Sensitive Phone Numbers list
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/etc/sensitive_pn.xml:system/etc/sensitive_pn.xml
